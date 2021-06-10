@@ -16,7 +16,7 @@
 #include <string.h>
 #include "soc/i2s_struct.h"
 #include "esp_idf_version.h"
-#if ESP_IDF_VERSION_MAJOR >= 4
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 3, 0)
 #include "hal/gpio_ll.h"
 #else
 #include "rom/ets_sys.h"
