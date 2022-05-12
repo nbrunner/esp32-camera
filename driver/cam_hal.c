@@ -415,7 +415,7 @@ void cam_start(void)
 
 camera_fb_t *cam_take(TickType_t timeout)
 {
-    camera_fb_t *dma_buffer;
+    camera_fb_t *dma_buffer = NULL;
     TickType_t start = xTaskGetTickCount();
     xQueueReceive(cam_obj->frame_buffer_queue, (void *)&dma_buffer, timeout);
     if (dma_buffer) {
